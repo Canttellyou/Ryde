@@ -1,5 +1,5 @@
 import { Alert, Image, ScrollView, Text, View } from "react-native";
-import React, { useState } from "react";
+import { useState } from "react";
 import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";

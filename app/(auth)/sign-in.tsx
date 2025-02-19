@@ -1,5 +1,5 @@
 import { Image, ScrollView, Text, View } from "react-native";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { icons, images } from "@/constants";
 import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";

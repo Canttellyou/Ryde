@@ -19,8 +19,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +33,35 @@
         "expo-router",
         {
           "origin": "https://uber.com/"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Ryde to use your location."
+        }
+      ],
+      [
+        "react-native-radar",
+        {
+          // boolean to enable iOS fraud detection, defaults to false
+          "iosFraud": true,
+          // string used in iOS NSLocationWhenInUseUsageDescription prompt, required for foreground location permissions
+          "iosNSLocationWhenInUseUsageDescription": "Your foreground location usage description.",
+          // string used in iOS NSLocationAlwaysAndWhenInUseUsageDescription prompt, required for background location permissions
+          "iosNSLocationAlwaysAndWhenInUseUsageDescription": "Your background location usage description.",
+          // boolean to enable iOS background location mode, required for .presetContinuous and .presetResponsive, defaults to false
+          "iosBackgroundMode": true,
+          // boolean to enable Android fraud detection, defaults to false
+          "androidFraud": true,
+          // boolean to enable Android background location permissions, defaults to false
+          "androidBackgroundPermission": true,
+          // boolean to enable Android foreground location permissions, defaults to false
+          "androidFineLocationPermission": true,
+          // boolean to enable motion activity detection, defaults to false
+          "addRadarSDKMotion": true,
+          // string used in iOS NSMotionUsageDescription prompt, defaults to "This app uses the motion service to provide motion-based services."
+          "iosNSMotionUsageDescription": "Your motion usage description."
         }
       ]
     ],
