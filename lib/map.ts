@@ -83,13 +83,6 @@ export const calculateDriverTimes = async ({
   destinationLatitude: number | null;
   destinationLongitude: number | null;
 }) => {
-  console.log(
-    userLatitude,
-    userLongitude,
-    destinationLatitude,
-    destinationLongitude
-  );
-
   if (
     !userLatitude ||
     !userLongitude ||

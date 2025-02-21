@@ -8,9 +8,6 @@ import { useDriverStore } from "@/store";
 
 const ConfirmRide = () => {
   const { drivers, selectedDriver, setSelectedDriver } = useDriverStore();
-  useEffect(() => {
-    console.log("Hi", drivers);
-  }, [drivers]);
 
   return (
     <RideLayout title="Choose a Driver" snapPoints={["65%", "85%"]}>
@@ -28,6 +25,8 @@ const ConfirmRide = () => {
           <View className="mx-5 mt-10">
             <CustomButton
               title="Select Ride"
+              className="mt-5"
+              disabled={!selectedDriver}
               onPress={() => router.push("/(root)/book-ride")}
             />
           </View>

@@ -44,7 +44,6 @@ const Map = () => {
       ) {
         try {
           const response = await axios.get(url);
-          console.log(response.data.features[0].geometry.coordinates);
 
           const routeCoordinates =
             response.data.features[0].geometry.coordinates

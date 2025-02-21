@@ -39,19 +39,25 @@ const CustomButton = ({
   textVariant = "default",
   IconLeft,
   IconRight,
+  disabled = false,
   className,
   ...props
 }: ButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
+      disabled={disabled}
       className={`w-full rounded-full p-3 flex flex-row justify-center items-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(
-        bgVariant
+        !disabled ? bgVariant : "secondary"
       )} ${className}`}
       {...props}
     >
       {IconLeft && <IconLeft />}
-      <Text className={`text-lg font-bold ${getTextVariantStyle(textVariant)}`}>
+      <Text
+        className={`text-lg font-bold ${getTextVariantStyle(
+          !disabled ? textVariant : "secondary"
+        )}`}
+      >
         {title}
       </Text>
       {IconRight && <IconRight />}
